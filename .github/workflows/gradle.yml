@@ -32,6 +32,11 @@ jobs:
       run: chmod +x ./gradlew
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew clean test --tests "GestionarBookingRunner" --tests "AgregarProductosRunner"
+      run: ./gradlew clean test --tests "GestionarBookingRunner" --tests "AgregarProductosRunner" aggregate
 
+    - name: Upload test reports as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-reports
+        path: build/reports/tests/test/index.html
   
