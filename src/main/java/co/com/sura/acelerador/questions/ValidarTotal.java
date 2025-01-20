@@ -17,8 +17,8 @@ public class ValidarTotal implements Question<Boolean> {
         double subTotal = Double.valueOf(actor.recall("subtotal").toString());
         double impuesto = Double.valueOf(LBL_PRECIO_IMPUESTO.resolveFor(actor).getText().replace("Tax: $", ""));
         double total = subTotal + impuesto;
-        Serenity.recordReportData().withTitle("subtotal").andContents(LBL_PRECIO_TOTAL.resolveFor(actor).getText().replace("Total: $",""));
-        Serenity.recordReportData().withTitle("subtotal").andContents(String.valueOf(total));
+        Serenity.recordReportData().withTitle("total").andContents(LBL_PRECIO_TOTAL.resolveFor(actor).getText().replace("Total: $",""));
+        Serenity.recordReportData().withTitle("total").andContents(String.valueOf(total));
         return String.format("%.2f",Double.valueOf(LBL_PRECIO_TOTAL.resolveFor(actor).getText().replace("Total: $",""))).equals( String.format("%.2f",total));
     }
 

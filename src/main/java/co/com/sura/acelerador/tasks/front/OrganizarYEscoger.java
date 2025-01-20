@@ -24,7 +24,6 @@ public class OrganizarYEscoger implements Task {
 
     String tipoOrdenamiento;
 
-
     @Override
     public <T extends Actor> void performAs(T actor) {
         List<Double> preciosSinCaracteres = new ArrayList<>();
@@ -33,9 +32,9 @@ public class OrganizarYEscoger implements Task {
             preciosSinCaracteres.add(Double.valueOf(precios.get(i).replace("$", "")));
         }
         if (tipoOrdenamiento.equals("Ascendente")) {
-            ordenarAscendentemente(preciosSinCaracteres,actor);
+            ordenarAscendentemente(preciosSinCaracteres,actor,"Ascendentemente");
         } else {
-            ordenarDescendentemente(preciosSinCaracteres,actor);
+            ordenarDescendentemente(preciosSinCaracteres,actor,"Descendentemente");
         }
         Faker faker = new Faker(new Locale(ESPANIOL));
         actor.attemptsTo(SelectFromOptions.byVisibleText("Price (low to high)").from(SLC_ORDEMANIENTO));

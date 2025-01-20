@@ -8,8 +8,8 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.ui.Button;
 
-import static co.com.sura.acelerador.userinterfaces.Acceso.PASSWORD_FIELD;
-import static co.com.sura.acelerador.userinterfaces.Acceso.USER_FIELD;
+import static co.com.sura.acelerador.userinterfaces.AccesoUI.PASSWORD_FIELD;
+import static co.com.sura.acelerador.userinterfaces.AccesoUI.USER_FIELD;
 import static co.com.sura.acelerador.util.Utilidades.codificacionBase64;
 
 @AllArgsConstructor

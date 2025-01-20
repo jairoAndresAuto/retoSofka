@@ -11,6 +11,7 @@ public class Constantes {
     public static final String JSON_CREAR_BOOKING = "{\"firstname\":\"%s\",\"lastname\":\"%s\",\"totalprice\":%s,\"depositpaid\":%s,\"bookingdates\":{\"checkin\":\"%s\",\"checkout\":\"%s\"},\"additionalneeds\":\"%s\"}";
     public static final String JSON_AUTENTICACION = "{\"username\":\"%s\",\"password\":\"%s\"}";
     public static final String RUTA_DATO_BOOKING = "src/test/resources/booking/dato.txt";
+    public static final String RUTA_DATOS_PRECIOS = "src/test/resources/datos/datos.txt";
     public static final Integer CERO = 0;
     public static final String TOKEN = "token";
     public static final String DATA = "data";

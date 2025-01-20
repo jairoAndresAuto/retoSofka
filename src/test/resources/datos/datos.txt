@@ -1,4 +1,4 @@
-Datos ordenados[7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
-Datos ordenados[49.99, 29.99, 15.99, 15.99, 9.99, 7.99]
-Datos ordenados[7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
-Datos ordenados[49.99, 29.99, 15.99, 15.99, 9.99, 7.99]
+Datos ordenados Ascendentemente[7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
+Datos ordenados Desscendentemente[49.99, 29.99, 15.99, 15.99, 9.99, 7.99]
+Datos ordenados Ascendentemente[7.99, 9.99, 15.99, 15.99, 29.99, 49.99]
+Datos ordenados Desscendentemente[49.99, 29.99, 15.99, 15.99, 9.99, 7.99]

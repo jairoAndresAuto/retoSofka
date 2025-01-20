@@ -15,6 +15,7 @@ public class LeerFicheroSin implements Task {
 
     private String rutaArchivo;
     private String texto;
+    private String tipoOrdenamiento;
 
     @SneakyThrows
     @Override
@@ -26,7 +27,7 @@ public class LeerFicheroSin implements Task {
             }
 
             try (FileWriter escritor = new FileWriter(archivo, true)) {
-                escritor.write("Datos ordenados");
+                escritor.write("Datos ordenados " + tipoOrdenamiento);
                 escritor.write(texto + "\n");
             }
 
@@ -35,7 +36,7 @@ public class LeerFicheroSin implements Task {
         }
     }
 
-    public static LeerFicheroSin sobreEscribirDatos(String rutaArchivo, String texto) {
-        return Tasks.instrumented(LeerFicheroSin.class, rutaArchivo, texto);
+    public static LeerFicheroSin sobreEscribirDatos(String rutaArchivo, String texto, String tipoOrdenamiento) {
+        return Tasks.instrumented(LeerFicheroSin.class, rutaArchivo, texto, tipoOrdenamiento);
     }
 }

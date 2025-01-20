@@ -15,7 +15,6 @@ public class GetConsumoConPath extends RestInteraction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
         actor.attemptsTo(Get.resource(String.valueOf(idBooking))
                 .with(request -> request
                         .relaxedHTTPSValidation()
