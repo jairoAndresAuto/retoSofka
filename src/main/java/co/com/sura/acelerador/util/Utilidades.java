@@ -7,6 +7,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static co.com.sura.acelerador.util.Constantes.CERO;
+import static co.com.sura.acelerador.util.Constantes.FIRST_NAME;
 import static co.com.sura.acelerador.util.Constantes.RUTA_DATOS_PRECIOS;
 
 public class Utilidades {
@@ -31,4 +33,7 @@ public class Utilidades {
         return lista.stream().sorted().collect(Collectors.toList());
     }
 
+    public static String validarDato(String dato) {
+        return (dato != null) ? dato : "";
+    }
 }

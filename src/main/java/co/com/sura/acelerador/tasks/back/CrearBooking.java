@@ -25,6 +25,7 @@ import static co.com.sura.acelerador.util.Constantes.JSON_CREAR_BOOKING;
 import static co.com.sura.acelerador.util.Constantes.LAST_NAME;
 import static co.com.sura.acelerador.util.Constantes.RUTA_DATO_BOOKING;
 import static co.com.sura.acelerador.util.Constantes.TOTAL_PRICE;
+import static co.com.sura.acelerador.util.Utilidades.validarDato;
 
 @AllArgsConstructor
 public class CrearBooking implements Task {
@@ -33,13 +34,13 @@ public class CrearBooking implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        String nombre = (datos.get(CERO).get(FIRST_NAME) != null) ? datos.get(CERO).get(FIRST_NAME) : "";
-        String apellido = (datos.get(CERO).get(LAST_NAME) != null) ? datos.get(CERO).get(LAST_NAME) : "";
-        String numero = (datos.get(CERO).get(TOTAL_PRICE) != null) ? datos.get(CERO).get(TOTAL_PRICE) : "";
-        String estado = (datos.get(CERO).get(DEPOSIT_PA_ID) != null) ? datos.get(CERO).get(DEPOSIT_PA_ID) : "";
-        String fechaIni = (datos.get(CERO).get(CHECKIN) != null) ? datos.get(CERO).get(CHECKIN) : "";
-        String fechaFin = (datos.get(CERO).get(CHECKOUT) != null) ? datos.get(CERO).get(CHECKOUT) : "";
-        String observacion = (datos.get(CERO).get(ADDITIONAL_NEEDS) != null) ? datos.get(CERO).get(ADDITIONAL_NEEDS) : "";
+        String nombre = validarDato(datos.get(CERO).get(FIRST_NAME));
+        String apellido = validarDato(datos.get(CERO).get(LAST_NAME));
+        String numero = validarDato(datos.get(CERO).get(TOTAL_PRICE));
+        String estado = validarDato(datos.get(CERO).get(DEPOSIT_PA_ID));
+        String fechaIni = validarDato(datos.get(CERO).get(CHECKIN));
+        String fechaFin = validarDato(datos.get(CERO).get(CHECKOUT));
+        String observacion = validarDato(datos.get(CERO).get(ADDITIONAL_NEEDS));
         String json = String.format(JSON_CREAR_BOOKING, nombre, apellido, numero, estado , fechaIni, fechaFin, observacion);
         actor.attemptsTo(PostConsumirServicioSinPath.servicio(json));
 

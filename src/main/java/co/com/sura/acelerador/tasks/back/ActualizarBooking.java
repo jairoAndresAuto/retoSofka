@@ -22,7 +22,8 @@ public class ActualizarBooking implements Task {
         actor.attemptsTo(LeerFichero.clave(RUTA_DATO_BOOKING,DATO),
                 BorrarDatosFichero.clave(RUTA_DATO_BOOKING),
                 CrearData.aleatoriamente());
-        actor.attemptsTo(PutConsumirServicioConPath.servicio(actor.recall(DATA).toString(),actor.recall(DATO).toString(),token));
+        actor.attemptsTo(PutConsumirServicioConPath.servicio(actor.recall(DATA).toString(),
+                actor.recall(DATO).toString(),token));
     }
 
     public static ActualizarBooking creado(String token) {
