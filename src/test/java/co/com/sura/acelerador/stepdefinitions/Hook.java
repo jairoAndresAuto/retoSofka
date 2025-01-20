@@ -31,6 +31,9 @@ public class Hook {
     @Managed(driver = "chrome")
     public static WebDriver driver;
 
+//    @Managed(driver = "Edge")
+//    public WebDriver driver;
+
     @Before
     public static void setTheStage() throws IOException {
         OnStage.setTheStage(new OnlineCast());
