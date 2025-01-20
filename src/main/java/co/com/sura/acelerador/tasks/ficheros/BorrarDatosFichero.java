@@ -18,7 +18,6 @@ public class BorrarDatosFichero implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         File file = new File(path);
-
         try (FileWriter fw = new FileWriter(file);){
             fw.flush();
         }

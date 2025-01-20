@@ -13,7 +13,12 @@ public class Constantes {
     public static final String RUTA_DATO_BOOKING = "src/test/resources/booking/dato.txt";
     public static final String RUTA_DATOS_PRECIOS = "src/test/resources/datos/datos.txt";
     public static final Integer CERO = 0;
+    public static final Integer UNO = 1;
+    public static final Integer DOS = 2;
+    public static final Integer QUINIENTOS = 500;
     public static final String TOKEN = "token";
+    public static final String LOGIN = "LOGIN";
+    public static final String BOOKING_ID = "bookingid";
     public static final String DATA = "data";
     public static final String DATO = "dato";
     public static final String USUARIO = "usuario";

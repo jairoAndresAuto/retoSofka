@@ -12,7 +12,9 @@ import static co.com.sura.acelerador.userinterfaces.ArticulosUI.BTN_ADD_CART;
 import static co.com.sura.acelerador.userinterfaces.ArticulosUI.BTN_CARRITO;
 import static co.com.sura.acelerador.userinterfaces.ArticulosUI.BTN_CHECKOUT;
 import static co.com.sura.acelerador.userinterfaces.ArticulosUI.BTN_REMOVE;
+import static co.com.sura.acelerador.util.Constantes.CERO;
 import static co.com.sura.acelerador.util.Constantes.ESPANIOL;
+import static co.com.sura.acelerador.util.Constantes.UNO;
 
 public class IngrasarAlCarritoYEliminar implements Task {
     @Override
@@ -20,7 +22,7 @@ public class IngrasarAlCarritoYEliminar implements Task {
         Faker faker = new Faker(new Locale(ESPANIOL));
         int cantidadRemove = BTN_REMOVE.resolveAllFor(actor).size();
         actor.attemptsTo(Click.on(BTN_CARRITO));
-        BTN_REMOVE.resolveAllFor(actor).get(faker.random().nextInt(0,cantidadRemove-1)).click();
+        BTN_REMOVE.resolveAllFor(actor).get(faker.random().nextInt(CERO,cantidadRemove-UNO)).click();
     }
 
     public static IngrasarAlCarritoYEliminar articulo() {

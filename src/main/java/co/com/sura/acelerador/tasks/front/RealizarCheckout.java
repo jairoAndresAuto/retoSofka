@@ -16,6 +16,7 @@ import static co.com.sura.acelerador.userinterfaces.ArticulosUI.TXT_APELLIDO;
 import static co.com.sura.acelerador.userinterfaces.ArticulosUI.TXT_CODIGO;
 import static co.com.sura.acelerador.userinterfaces.ArticulosUI.TXT_NOMBRE;
 import static co.com.sura.acelerador.util.Constantes.ESPANIOL;
+import static co.com.sura.acelerador.util.Constantes.QUINIENTOS;
 
 public class RealizarCheckout implements Task {
 
@@ -27,7 +28,7 @@ public class RealizarCheckout implements Task {
                 Enter.theValue(faker.name().lastName()).into(TXT_APELLIDO),
                 Enter.theValue(String.valueOf(faker.random().nextInt(1111, 9999))).into(TXT_CODIGO),
                 Click.on(BTN_CONTINUAR),
-                Espera.unTiempo(500));
+                Espera.unTiempo(QUINIENTOS));
     }
 
     public static RealizarCheckout compra() {

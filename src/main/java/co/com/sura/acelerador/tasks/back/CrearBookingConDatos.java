@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 
 
+import static co.com.sura.acelerador.util.Constantes.BOOKING_ID;
 import static co.com.sura.acelerador.util.Constantes.DATA;
 import static co.com.sura.acelerador.util.Constantes.RUTA_DATO_BOOKING;
 
@@ -17,7 +18,7 @@ public class CrearBookingConDatos implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(CrearData.aleatoriamente());
         actor.attemptsTo(PostConsumirServicioSinPath.servicio(actor.recall(DATA).toString()));
-        actor.attemptsTo(EscribirFichero.clave(RUTA_DATO_BOOKING, SerenityRest.lastResponse().jsonPath().getString("bookingid")));
+        actor.attemptsTo(EscribirFichero.clave(RUTA_DATO_BOOKING, SerenityRest.lastResponse().jsonPath().getString(BOOKING_ID)));
     }
 
     public static CrearBookingConDatos aleatorios() {

@@ -25,12 +25,10 @@ public class LeerFicheroSin implements Task {
             if (!archivo.exists()) {
                 archivo.createNewFile();
             }
-
             try (FileWriter escritor = new FileWriter(archivo, true)) {
                 escritor.write("Datos ordenados " + tipoOrdenamiento);
                 escritor.write(texto + "\n");
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }

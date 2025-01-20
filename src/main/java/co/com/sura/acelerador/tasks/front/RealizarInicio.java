@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.ui.Button;
 
 import static co.com.sura.acelerador.userinterfaces.AccesoUI.PASSWORD_FIELD;
 import static co.com.sura.acelerador.userinterfaces.AccesoUI.USER_FIELD;
+import static co.com.sura.acelerador.util.Constantes.LOGIN;
 import static co.com.sura.acelerador.util.Utilidades.codificacionBase64;
 
 @AllArgsConstructor
@@ -23,7 +24,7 @@ public class RealizarInicio implements Task {
         actor.attemptsTo(
                 Enter.theValue(codificacionBase64(user)).into(USER_FIELD),
                 Enter.theValue(codificacionBase64(pass)).into(PASSWORD_FIELD),
-                Click.on(Button.withText("LOGIN"))
+                Click.on(Button.withText(LOGIN))
         );
     }
 

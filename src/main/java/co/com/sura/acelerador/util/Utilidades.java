@@ -12,7 +12,6 @@ import static co.com.sura.acelerador.util.Constantes.RUTA_DATOS_PRECIOS;
 public class Utilidades {
 
     private Utilidades() {
-
     }
 
     public static String codificacionBase64(String clave) {

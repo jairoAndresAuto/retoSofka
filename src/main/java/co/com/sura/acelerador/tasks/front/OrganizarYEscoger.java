@@ -15,7 +15,11 @@ import java.util.Locale;
 import static co.com.sura.acelerador.userinterfaces.ArticulosUI.BTN_ADD_CART;
 import static co.com.sura.acelerador.userinterfaces.ArticulosUI.LBL_PRECIO_ARTICULO;
 import static co.com.sura.acelerador.userinterfaces.ArticulosUI.SLC_ORDEMANIENTO;
+import static co.com.sura.acelerador.util.Constantes.CERO;
+import static co.com.sura.acelerador.util.Constantes.DOS;
 import static co.com.sura.acelerador.util.Constantes.ESPANIOL;
+import static co.com.sura.acelerador.util.Constantes.QUINIENTOS;
+import static co.com.sura.acelerador.util.Constantes.UNO;
 import static co.com.sura.acelerador.util.Utilidades.ordenarAscendentemente;
 import static co.com.sura.acelerador.util.Utilidades.ordenarDescendentemente;
 
@@ -39,11 +43,11 @@ public class OrganizarYEscoger implements Task {
         Faker faker = new Faker(new Locale(ESPANIOL));
         actor.attemptsTo(SelectFromOptions.byVisibleText("Price (low to high)").from(SLC_ORDEMANIENTO));
         int cantidadPosiciones = BTN_ADD_CART.resolveAllFor(actor).size();
-        BTN_ADD_CART.resolveAllFor(actor).get(0).click();
-        actor.attemptsTo(Espera.unTiempo(500));
-        BTN_ADD_CART.resolveAllFor(actor).get(cantidadPosiciones - 1).click();
-        actor.attemptsTo(Espera.unTiempo(500));
-        BTN_ADD_CART.resolveAllFor(actor).get(faker.random().nextInt(1, cantidadPosiciones - 2)).click();
+        BTN_ADD_CART.resolveAllFor(actor).get(CERO).click();
+        actor.attemptsTo(Espera.unTiempo(QUINIENTOS));
+        BTN_ADD_CART.resolveAllFor(actor).get(cantidadPosiciones -UNO).click();
+        actor.attemptsTo(Espera.unTiempo(QUINIENTOS));
+        BTN_ADD_CART.resolveAllFor(actor).get(faker.random().nextInt(UNO, cantidadPosiciones - DOS)).click();
     }
 
     public static OrganizarYEscoger articulos(String tipoOrdenamiento) {
