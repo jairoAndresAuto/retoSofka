@@ -28,17 +28,17 @@ Los escenarios de front son los de realizar compras en linea, algunos de los dat
 
 ### Estructura del Proyecto:
 
-[src/main/java/co/com/sura/acelerador/interactions]() - Tanto back como front <br>
-[src/main/java/co/com/sura/acelerador/questions]() - Aserciones de las pruebas. <br>
-[src/main/java/co/com/sura/acelerador/task]() - que ejecutan las tareas de las pruebas. <br>
-[src/main/java/co/com/sura/acelerador/userinterfaces]() - Donde se mapean cada uno de los elementos de la automatización por funcionalidad <br>
-[src/main/java/co/com/sura/acelerador/util]() - Clase de utilidades genericas del proyecto <br>
+[src/main/java/co/com/sura/acelerador/interactions]()Tanto back como front <br>
+src/main/java/co/com/sura/acelerador/questions - Aserciones de las pruebas. <br>
+src/main/java/co/com/sura/acelerador/task - que ejecutan las tareas de las pruebas. <br>
+src/main/java/co/com/sura/acelerador/userinterfaces - Donde se mapean cada uno de los elementos de la automatización por funcionalidad <br>
+src/main/java/co/com/sura/acelerador/util - Clase de utilidades genericas del proyecto <br>
 
-[src/test/java/co/com/sura/acelerador/runners]() - Clases para ejecutar los test <br>
-[src/test/java/co/com/sura/acelerador/stepdefinitions]() - Son la traducción de los features a código <br>
-[src/test/resources/features]() - Historias de usuario que se llevarán a cabo en las pruebas <br>
-[src/test/resources/booking/dato.txt]() - Donde es escribe el id booking cada ejecucion <br>
-[src/test/resources/datos/datos.txt]() - Donde se escriben los ordenamientos de los precios tanto descendentemente como ascendentemente <br>
+src/test/java/co/com/sura/acelerador/runners - Clases para ejecutar los test <br>
+src/test/java/co/com/sura/acelerador/stepdefinitions - Son la traducción de los features a código <br>
+src/test/resources/features - Historias de usuario que se llevarán a cabo en las pruebas <br>
+src/test/resources/booking/dato.txt - Donde es escribe el id booking cada ejecucion <br>
+src/test/resources/datos/datos.txt - Donde se escriben los ordenamientos de los precios tanto descendentemente como ascendentemente <br>
 
 ### Generación de Reportes:
 
